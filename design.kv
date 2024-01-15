@@ -1,0 +1,40 @@
+<MyScreen>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: 'images/bg1.jpeg'
+
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'top'
+        MDTopAppBar:
+            title: "DiceRoller"
+        RelativeLayout:
+            Image:
+                id: dice_state
+                size_hint_y: 0.3
+                size_hint_x: 0.3
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5 }
+                source: "assets/dice_1.png"
+            MDRaisedButton:
+                id: roll_button
+                text: 'ROLL'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+                on_release: root.play()
+                disabled: root.button_disabled
+
+            Switch:
+                id: my_switch
+                on_active: root.on_switch_active(self)
+                size_hint: None, 1
+                width: '100dp'
+                active: True
+
+
+<RootWidget>:
+    MyScreen:
+        name: "Dice_Screen"
+
+
+
+
