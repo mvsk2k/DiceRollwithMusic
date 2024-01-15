@@ -50,7 +50,7 @@ class MainApp(MDApp):
     def update(self, dt):
         if soundenable == "True":
             self.sound_music1.play()
-        print(soundenable)
+
 
 
 
