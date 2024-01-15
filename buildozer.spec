@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = ModularDice
+title = DigitalDice
 
 # (str) Package name
-package.name = ModularDice
+package.name = DigitalDice
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
